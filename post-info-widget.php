@@ -41,15 +41,16 @@ class Post_Info_Widget extends WP_Widget {
 		echo $before_widget;
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; } 
 			ob_start();
+// Edit after this section 
+// we asked your WordPress to get the title and description from your given text
+// You can add any WordPress function to execute the result in front end
+// $title, $text and others are given here for example
+// the <!-- Post Info Widget Starts http://thecustomizewindows.com/ --> will showup in frontend as it is outside the loop
 			eval('?>'.$text);
 			$text = ob_get_contents();
 			ob_end_clean();
 			?>
 	<!-- Post Info Widget Starts http://thecustomizewindows.com/ -->
-	
-// Edit after this section
-// You can add any WordPress function to execute the result in front end
-// $title, $text and others are given here for example
 
 			<div class="execphpwidget"><?php echo $instance['filter'] ? wpautop($text) : $text; ?></div>
 		<?php
