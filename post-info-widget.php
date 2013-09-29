@@ -26,9 +26,9 @@ License: GPL3
     
 */
 
-class PHP_Code_Widget extends WP_Widget {
+class Post_Info_Widget extends WP_Widget {
 
-	function PHP_Code_Widget() {
+	function Post_Info_Widget() {
 		$widget_ops = array('classname' => 'widget_execphp', 'description' => __('Arbitrary text, HTML, or PHP Code'));
 		$control_ops = array('width' => 400, 'height' => 350);
 		$this->WP_Widget('execphp', __('PHP Code'), $widget_ops, $control_ops);
@@ -76,13 +76,13 @@ class PHP_Code_Widget extends WP_Widget {
 	}
 }
 
-add_action('widgets_init', create_function('', 'return register_widget("PHP_Code_Widget");'));
+add_action('widgets_init', create_function('', 'return register_widget("Post_Info_Widget");'));
 
 // donate link on manage plugin page
 add_filter('plugin_row_meta', 'execphp_donate_link', 10, 2);
 function execphp_donate_link($links, $file) {
 	if ($file == plugin_basename(__FILE__)) {
-		$donate_link = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=otto%40ottodestruct%2ecom">Donate</a>';
+		$donate_link = 'URL here">Donate</a>';
 		$links[] = $donate_link;
 	}
 	return $links;
