@@ -3,7 +3,7 @@
 Plugin Name: Post Info Widget
 Plugin URI: http://thecustomizewindows.com/
 Description: Like the Executable PHP widget, it has some default functions. Heavily derived from the Executable PHP widget by Otto in WordPress.
-Author: Otto
+Author: Abhishek_Ghosh
 Version: 1.0
 Author URI: http://thecustomizewindows.com/
 License: GPL3
