@@ -44,7 +44,15 @@ class Post_Info_Widget extends WP_Widget {
 			eval('?>'.$text);
 			$text = ob_get_contents();
 			ob_end_clean();
-			?>			
+			?>
+	<!-- Post Info Widget Starts http://thecustomizewindows.com/ -->
+	
+/**
+
+* Edit after this section
+* You can add any WordPress function to execute the result in front end.
+    
+**/
 			<div class="execphpwidget"><?php echo $instance['filter'] ? wpautop($text) : $text; ?></div>
 		<?php
 		echo $after_widget;
